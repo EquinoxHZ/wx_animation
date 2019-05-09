@@ -1,0 +1,44 @@
+<!--index.wxml-->
+
+<view class='btn'>
+  <view class='top' bindtap='showTop'></view>
+  <view class='right' bindtap='showRight'></view>
+  <view class='left' bindtap='showLeft'></view>
+  <view class='bottom' bindtap='showBottom'></view>
+  <view class='mid' bindtap='showPop'>popup</view>
+</view>
+
+<import src='/utils/mask/mask.wxml' />
+<template is='mask' data='{{maskHidden,maskAnimateData}}' />
+
+<view class='top-mask' style='top:{{topMaskHide}}' animation="{{topMask}}">
+  top
+</view>
+
+<view class='right-mask' style='right:{{rightMaskHide}}' animation="{{rightMask}}">
+  right
+</view>
+
+<view class='bottom-mask' style='bottom:{{bottomMaskHide}}' animation="{{bottomMask}}">
+  bottom
+</view>
+
+<view class='left-mask' style='left:{{leftMaskHide}}' animation="{{leftMask}}">
+  left
+</view>
+
+<view class='pop-mask' style='opacity:0' hidden='{{popMaskHide}}' bindtap='hideMask' animation="{{popMask}}">
+  popup
+</view>
+
+<view class='speed'>
+  <view>动画速度</view>
+  <slider min="200" max="1000" step='100' show-value selected-color='#4169e1' block-color='#f0f8ff' bindchange='changeSpeed' value='{{speed}}'></slider>
+</view>
+
+<view class='type'>
+  <view>动画效果</view>
+  <slider max="6" step='1' show-value selected-color='#4169e1' block-color='#f0f8ff' bindchange='changeType' value='{{type}}'></slider>
+</view>
+
+<button bindtap='confirm' class='confirm'>确认更改动画效果</button>

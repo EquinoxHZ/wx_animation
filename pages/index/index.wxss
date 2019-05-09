@@ -1,0 +1,162 @@
+@import "../../utils/mask/mask.wxss";
+
+.btn {
+  width: 500rpx;
+  height: 500rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn>view {
+  height: 50%;
+  width: 50%;
+  position: relative;
+}
+
+.btn>.top {
+  background: #f0f8ff;
+}
+
+.btn>.top::after {
+  content: '↑';
+}
+
+.btn>.right {
+  background: #4169e1;
+}
+
+.btn>.right::after {
+  content: '→';
+}
+
+.btn>.bottom {
+  background: #f0f8ff;
+}
+
+.btn>.bottom::after {
+  content: '↓';
+}
+
+.btn>.left {
+  background: #4169e1;
+}
+
+.btn>.left::after {
+  content: '←';
+}
+
+.btn>view::after {
+  font-size: 60rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn>.mid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  line-height: 250rpx;
+  text-align: center;
+  background: #000080;
+  border-radius: 50%;
+  color: white;
+}
+
+.top-mask {
+  position: fixed;
+  width: 100vw;
+  height: 20vh;
+  background: #000080;
+  color: white;
+  text-align: center;
+  line-height: 20vh;
+  z-index: 20;
+}
+
+.right-mask {
+  position: fixed;
+  width: 40vw;
+  height: 100vh;
+  background: #000080;
+  color: white;
+  text-align: center;
+  line-height: 100vh;
+  z-index: 20;
+  top: 0;
+}
+
+.bottom-mask {
+  position: fixed;
+  width: 100vw;
+  height: 20vh;
+  background: #000080;
+  color: white;
+  text-align: center;
+  line-height: 20vh;
+  z-index: 20;
+}
+
+.left-mask {
+  position: fixed;
+  width: 40vw;
+  height: 100vh;
+  background: #000080;
+  color: white;
+  text-align: center;
+  line-height: 100vh;
+  z-index: 20;
+  top: 0;
+}
+
+.pop-mask {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #00bfff;
+  color: white;
+  border-radius: 30rpx;
+  height: 70vw;
+  width: 70vw;
+  text-align: center;
+  line-height: 70vw;
+  z-index: 20;
+  font-size: 90rpx;
+}
+
+.speed {
+  margin-top: 30rpx;
+}
+
+.speed>view {
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.type {
+  margin-top: 20rpx;
+}
+
+.type>view {
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.confirm {
+  background: #4169e1;
+  position: fixed;
+  bottom: 10vw;
+  width: 60vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+}
